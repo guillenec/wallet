@@ -1,8 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { authService } from './authService'
 
+// const token = localStorage.getItem('token')
+
 const initialState = {
-  isAuthenticated: localStorage.getItem('token') ? true : false,
+  isAuthenticated: !!localStorage.getItem('token'),
   user: null,
   loading: false,
   error: null
@@ -44,7 +46,7 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     loginSuccess: (state, action) => {
-      console.log("LOGIN ->",action.payload)
+      console.log('LOGIN ->', action.payload)
 
       const { token, _id } = action.payload
       if (token) {

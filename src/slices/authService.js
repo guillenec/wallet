@@ -1,6 +1,6 @@
 
 const userRegister = async (credentials) => {
-  const response = await fetch('http://localhost:5000/api/register', {
+  const response = await fetch('https://rest-api-wallet-no-country-production.up.railway.app/api/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -17,7 +17,7 @@ const userRegister = async (credentials) => {
 }
 
 const userLogin = async (credentials) => {
-  const response = await fetch('http://localhost:5000/api/login', {
+  const response = await fetch('https://rest-api-wallet-no-country-production.up.railway.app/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

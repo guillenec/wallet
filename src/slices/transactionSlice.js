@@ -1,9 +1,9 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import axios from 'axios'
 // import { updateCard } from './cardSlice';
 
 export const createTransaction = createAsyncThunk(
-  "transactions/createTransaction",
+  'transactions/createTransaction',
   async (
     { card, concept, receiver_account, amount, cardId, token },
     { getState, rejectWithValue }
@@ -11,189 +11,189 @@ export const createTransaction = createAsyncThunk(
     try {
       // Obtener el token desde el estado de Redux
 
-      console.log(token);
+      console.log(token)
 
-      console.log(card);
-      console.log(concept);
-      console.log(receiver_account);
-      console.log(amount);
-      console.log(cardId);
+      console.log(card)
+      console.log(concept)
+      console.log(receiver_account)
+      console.log(amount)
+      console.log(cardId)
 
       // Lógica para crear una transacción usando axios y enviar el token en los encabezados
       const transactionResponse = await axios.post(
-        "http://localhost:5000/api/transaction/create-transaction",
+        'https://rest-api-wallet-no-country-production.up.railway.app/api/transaction/create-transaction',
         {
           card,
           concept,
           receiver_account,
-          amount,
+          amount
         },
         {
           headers: {
-            Authorization: `Bearer ${token}`,
-          },
+            Authorization: `Bearer ${token}`
+          }
         }
-      );
-      console.log(transactionResponse.data);
+      )
+      console.log(transactionResponse.data)
 
       // Lógica para actualizar el monto de la tarjeta asociada a la transacción
-      const cards = getState().cardFabian;
+      const cards = getState().cardFabian
 
-      const cardToUpdate = cards.data.find((card) => card._id === cardId);
+      const cardToUpdate = cards.data.find((card) => card._id === cardId)
       //   const cardToUpdate = cards.data.find((card) => console.log(card));
 
-      console.log(cards);
+      console.log(cards)
 
-      console.log(cardToUpdate);
+      console.log(cardToUpdate)
 
       if (cardToUpdate) {
-        console.log("westoy aqui");
+        console.log('westoy aqui')
         // Verificar si el saldo es suficiente para realizar la transferencia
         if (cardToUpdate.balance >= amount) {
           // Realiza la actualización del monto de la tarjeta y envía el token en los encabezados
           const updatedCard = {
             ...cardToUpdate,
-            balance: cardToUpdate.balance - amount,
-          };
+            balance: cardToUpdate.balance - amount
+          }
           const updateCardResponse = await axios.put(
-            `http://localhost:5000/api/card/${cardToUpdate._id}`,
+            `https://rest-api-wallet-no-country-production.up.railway.app/api/card/${cardToUpdate._id}`,
             updatedCard,
             {
               headers: {
-                Authorization: `Bearer ${token}`,
-              },
+                Authorization: `Bearer ${token}`
+              }
             }
-          );
+          )
 
           // Si la actualización fue exitosa, retorna la transacción
           if (updateCardResponse.status === 200) {
-            console.log(updateCardResponse.data);
+            console.log(updateCardResponse.data)
 
-            return transactionResponse.data;
+            return transactionResponse.data
           } else {
-            throw new Error("Error updating card balance");
+            throw new Error('Error updating card balance')
           }
         } else {
-          throw new Error("Insufficient balance");
+          throw new Error('Insufficient balance')
         }
       } else {
-        throw new Error("Card not found");
+        throw new Error('Card not found')
       }
     } catch (err) {
-      return rejectWithValue(err.message);
+      return rejectWithValue(err.message)
     }
   }
-);
+)
 export const getTransactions = createAsyncThunk(
-  "transactions/getTransactions",
+  'transactions/getTransactions',
   async (_, { rejectWithValue }) => {
     try {
       // Obtener el token del front-end (por ejemplo, almacenado en el localStorage)
-      const token = localStorage.getItem("token"); // Ajusta el nombre según donde estés almacenando el token en el front-end
+      const token = localStorage.getItem('token') // Ajusta el nombre según donde estés almacenando el token en el front-end
 
       // Verificar si el token está presente
       if (!token) {
-        throw new Error("Token not found");
+        throw new Error('Token not found')
       }
 
       // Lógica para obtener las transacciones del usuario usando axios y enviar el token en los encabezados
       const transactions = await axios.get(
-        "http://localhost:5000/api/transaction/get-transactions",
+        'https://rest-api-wallet-no-country-production.up.railway.app/api/transaction/get-transactions',
         {
           headers: {
-            Authorization: `Bearer ${token}`,
-          },
+            Authorization: `Bearer ${token}`
+          }
         }
-      );
+      )
 
-      return transactions.data;
+      return transactions.data
     } catch (err) {
-      throw new Error(err.message);
+      throw new Error(err.message)
     }
   }
-);
+)
 
 export const deleteTransaction = createAsyncThunk(
-  "transactions/deleteTransaction",
+  'transactions/deleteTransaction',
   async (id, { getState, rejectWithValue }) => {
     try {
       // Obtener el token desde el estado de Redux
-      const { token } = getState().user; // Ajusta el nombre de la propiedad según corresponda en tu estado
+      const { token } = getState().user // Ajusta el nombre de la propiedad según corresponda en tu estado
 
       // Lógica para eliminar una transacción usando axios y enviar el token en los encabezados
       const deletedTransaction = await axios.delete(
-        `http://localhost:5000/api/transaction/delete-transaction/:${id}`,
+        `https://rest-api-wallet-no-country-production.up.railway.app/api/transaction/delete-transaction/:${id}`,
         {
           headers: {
-            Authorization: `Bearer ${token}`,
-          },
+            Authorization: `Bearer ${token}`
+          }
         }
-      );
+      )
 
       if (!deletedTransaction) {
-        throw new Error("Transacción no encontrada");
+        throw new Error('Transacción no encontrada')
       }
 
-      return deletedTransaction.data._id;
+      return deletedTransaction.data._id
     } catch (err) {
-      throw new Error(err.message);
+      throw new Error(err.message)
     }
   }
-);
+)
 
 const transactionSlice = createSlice({
-  name: "transactions",
+  name: 'transactions',
   initialState: {
     transactions: [],
     loading: false,
-    error: null,
+    error: null
   },
   reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(createTransaction.pending, (state) => {
-        state.loading = true;
-        state.error = null;
+        state.loading = true
+        state.error = null
       })
       .addCase(createTransaction.fulfilled, (state, action) => {
-        state.transactions.push(action.payload);
-        state.loading = false;
-        state.error = null;
+        state.transactions.push(action.payload)
+        state.loading = false
+        state.error = null
       })
       .addCase(createTransaction.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
+        state.loading = false
+        state.error = action.error.message
       })
       .addCase(getTransactions.pending, (state) => {
-        state.loading = true;
-        state.error = null;
+        state.loading = true
+        state.error = null
       })
       .addCase(getTransactions.fulfilled, (state, action) => {
-        state.transactions = action.payload;
-        state.loading = false;
-        state.error = null;
+        state.transactions = action.payload
+        state.loading = false
+        state.error = null
       })
       .addCase(getTransactions.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
+        state.loading = false
+        state.error = action.error.message
       })
       .addCase(deleteTransaction.pending, (state) => {
-        state.loading = true;
-        state.error = null;
+        state.loading = true
+        state.error = null
       })
       .addCase(deleteTransaction.fulfilled, (state, action) => {
-        const deletedTransactionId = action.payload;
+        const deletedTransactionId = action.payload
         state.transactions = state.transactions.filter(
           (transaction) => transaction._id !== deletedTransactionId
-        );
-        state.loading = false;
-        state.error = null;
+        )
+        state.loading = false
+        state.error = null
       })
       .addCase(deleteTransaction.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
-      });
-  },
-});
+        state.loading = false
+        state.error = action.error.message
+      })
+  }
+})
 
-export default transactionSlice.reducer;
+export default transactionSlice.reducer

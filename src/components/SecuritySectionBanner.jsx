@@ -1,16 +1,18 @@
 export const SecuritySectionBanner = () => {
   return (
-    <section className="w-full h-auto flex justify-center items-center">
-      <section className="w-full h-[350px] sm:h-[400px] p-6 rounded-[5px] overflow-hidden" 
-      style={{backgroundImage: "url(https://res.cloudinary.com/dpiwmbsog/image/upload/v1685972224/wallet/Rectangle_38_2_kpcxex.png)",
-      backgroundSize:"cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-    }}
+    <section className='w-full h-auto flex justify-center items-center'>
+      <section
+        className='w-full h-[350px] sm:h-[400px] p-6 rounded-[5px] overflow-hidden'
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dpiwmbsog/image/upload/v1685972224/wallet/Rectangle_38_2_kpcxex.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
-        <div className="flex sm:flex-row flex-col w-full h-full justify-evenly">
-          <div className="w-full h-auto font-titulo flex flex-row justify-start items-start p-4">
-            <h2 className=" text-2xl text-white text-center">
+        <div className='flex sm:flex-row flex-col w-full h-full justify-evenly'>
+          <div className='w-full h-auto font-titulo flex flex-row justify-start items-start p-4'>
+            <h2 className=' text-2xl text-white text-center'>
               Máxima seguridad garantizada
             </h2>
           </div>

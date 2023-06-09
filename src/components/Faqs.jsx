@@ -42,7 +42,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)'
 }))
 
-export default function Faqs() {
+export default function Faqs () {
   const [expanded, setExpanded] = React.useState('panel1')
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -50,12 +50,12 @@ export default function Faqs() {
   }
 
   return (
-    <section id="faq-section" className="w-full sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[80%] mx-auto pb-20 bg-fondo">
-      <Accordion 
+    <section id='faq-section' className='w-full sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[80%] mx-auto pb-20 bg-fondo'>
+      <Accordion
         expanded={expanded === 'panel1'}
         onChange={handleChange('panel1')}
       >
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+        <AccordionSummary aria-controls='panel1d-content' id='panel1d-header'>
           <Typography>¿Qué es PingüiWallet?</Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -71,7 +71,7 @@ export default function Faqs() {
         expanded={expanded === 'panel2'}
         onChange={handleChange('panel2')}
       >
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+        <AccordionSummary aria-controls='panel2d-content' id='panel2d-header'>
           <Typography>
             ¿Qué necesito para abrir una cuenta en PingüiWallet?
           </Typography>
@@ -79,9 +79,9 @@ export default function Faqs() {
         <AccordionDetails>
           <Typography>
             Necesitarás tener a mano los siguientes documentos e información:
-              <span className="list-item w-full ml-4">👤 Ser una persona físicamayor de edad.</span>
-              <span className="list-item w-full ml-4">📝 Documento Nacional de Identidad (DNI) válido.</span>
-              <span className="list-item w-full ml-4">☎ Datos personales como nombre completo, dirección y fecha de nacimiento.</span>
+            <span className='list-item w-full ml-4'>👤 Ser una persona físicamayor de edad.</span>
+            <span className='list-item w-full ml-4'>📝 Documento Nacional de Identidad (DNI) válido.</span>
+            <span className='list-item w-full ml-4'>☎ Datos personales como nombre completo, dirección y fecha de nacimiento.</span>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -89,7 +89,7 @@ export default function Faqs() {
         expanded={expanded === 'panel3'}
         onChange={handleChange('panel3')}
       >
-        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
+        <AccordionSummary aria-controls='panel3d-content' id='panel3d-header'>
           <Typography>
             {' '}
             ¿Cómo puedo contactar al equipo de soporte de PingüiWallet?
@@ -101,10 +101,10 @@ export default function Faqs() {
             contacto con nuestro equipo de soporte a través de los siguientes
             canales:
 
-              <span className="list-item w-full ml-4">☎ Número de teléfono: +1 555-123-4567</span>
-              <span className="list-item w-full ml-4">✉ Email: walletnc.latam@gmail.com</span>
-              <span className="list-item w-full ml-4">🔴🎬 Chat en vivo en nuestro sitio web</span>
-            
+            <span className='list-item w-full ml-4'>☎ Número de teléfono: +1 555-123-4567</span>
+            <span className='list-item w-full ml-4'>✉ Email: walletnc.latam@gmail.com</span>
+            <span className='list-item w-full ml-4'>🔴🎬 Chat en vivo en nuestro sitio web</span>
+
           </Typography>
         </AccordionDetails>
       </Accordion>
