@@ -193,7 +193,7 @@ const CreditCardForm = () => {
 
       {cononModal ? (<p className='w-full h-auto p-2 text-center bg-hoverBotonSubmenu text-green-500 font-parrafo font-[500]'>{successMessage}</p>) : null}
 
-      <div className='bg-hoverBotonSubmenu w-full h-auto sm:h-auto flex flex-column sm:flex-row justify-center items-center flex-wrap sm:flex-nowrap gap-6 pt-[5rem] pb-[5rem]'>
+      <div className='w-full h-auto sm:h-auto flex flex-column sm:flex-row justify-center items-center flex-wrap sm:flex-nowrap gap-6 pt-[5rem] pb-[5rem]'>
 
         {/* esta es la card */}
         <div className='flip-card bg-transparent w-[350px] h-[200px] rounded-lg border-solid overflow-hidden perspective-1000 relative ' onClick={flipCard}>

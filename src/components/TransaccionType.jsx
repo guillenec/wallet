@@ -3,7 +3,7 @@ import TransactionComponent from '../pages/TransactionComponent'
 
 const TransaccionType = () => {
   return (
-    <section className='   w-screen h-screen flex bg-[#EAEEF7]  justify-center  items-start     pt-40  '>
+    <section className='w-screen h-screen flex bg-[#EAEEF7]  justify-center  items-start     pt-40  '>
       <div className='w-auto h-auto bg-white flex flex-col p-10 justify-center border  '>
         <Link
           to='/home/transaccion/Type/Quantity'
