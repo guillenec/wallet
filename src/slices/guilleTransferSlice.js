@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 // const API_URL = 'https://rest-api-wallet-no-country-production.up.railway.app/api/transaction';
 
 // Definir la URL base para las llamadas a la API
-const API_URL = 'https://rest-api-wallet-no-country-production.up.railway.app/api/transaction'
+const API_URL = 'https://rest-api-wallet-no-country-production.up.railway.app/api/api/transaction'
 const token = localStorage.getItem('token')
 
 // Acción asíncrona para crear una transacción
