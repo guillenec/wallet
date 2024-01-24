@@ -1,13 +1,15 @@
-## BIENVENIDOS A:
+## BIENVENIDOS A
 
 ![ScreenShot](https://res.cloudinary.com/dhd78l3go/image/upload/v1686010912/logo_pingui_yab5lp.png)
-## PINGUI WALLET -FRONTEND- 
+
+## PINGUI WALLET -FRONTEND-
 
 ![ScreenShot](https://res.cloudinary.com/dpiwmbsog/image/upload/v1686188113/wallet/principalpw_ectfld.png)
 
 </br>
 
 ## 👨‍💻 Dependencias
+
 * Node 16.19.0
 * React : 18.2.0:
 * Vite 4.3.2
@@ -26,7 +28,7 @@
   * @heroicons/react": 1.0.4,
   * IonIcons : 7.1.0, directamente en el HTML sin instalarlo.
 
-</br>   
+</br>
 
 * para normalizar codigo
   * autoprefixer: 10.4.14
@@ -39,36 +41,45 @@
 </br>
 
 ## 🚀 Caracteristica
-  * Landing page (pagina de precentacion)
-  * Login/Reegistro
-  * Seccion exclusiva para el usuario.
-  * CRUD de tarjeta de credito.
-  * CRUD de Usuario (a medias, se puede listar y modificar).
-  * Transacciones, se pueden realizar transacciones entre usuarios, (transferir dinero o pagar factura).
-  * Se visualiza el historial de Transacciones.
-  * Canales de Contacto, Denuncias y Reclamos.
-  * Se creo los slice, para poder crear, modificar, listar y eliminar, en todos los casos, aunque no se usaron todos.
-  * CRUD de Presupuestos (no se puede modifica, si elmiminar y añadir uno nuevo)
+
+* Landing page (pagina de precentacion)
+* Login/Reegistro
+* Seccion exclusiva para el usuario.
+* CRUD de tarjeta de credito.
+* CRUD de Usuario (a medias, se puede listar y modificar).
+* Transacciones, se pueden realizar transacciones entre usuarios, (transferir dinero o pagar factura).
+* Se visualiza el historial de Transacciones.
+* Canales de Contacto, Denuncias y Reclamos.
+* Se creo los slice, para poder crear, modificar, listar y eliminar, en todos los casos, aunque no se usaron todos.
+* CRUD de Presupuestos (no se puede modifica, si elmiminar y añadir uno nuevo)
 
 </br>
 
 ## 📦 Instalación
-  * Clonamos el repo 
+
+* Clonamos el repo
+
   ```bash
   ╭─pescado at rabioso in ~/
   ╰─± git clone https://github.com/No-Country/Virtual_Wallet_MERN/tree/develop
   ```
-  * Accedemos al Cliente:
+
+* Accedemos al Cliente:
+
   ```bash
   ╭─pescado at rabioso in ~/
   ╰─± cd Virtual_Wallet_MERN/client
   ```
-  * Instalamos las dependencias necesarias:
+
+* Instalamos las dependencias necesarias:
+
   ```bash
   ╭─pescado at rabioso in ~/Virtual_Wallet_MERN/client
   ╰─± npm install
   ```
-  * Iniciamos la Applicación web
+
+* Iniciamos la Applicación web
+
   ```bash
   ╭─pescado at rabioso in ~/Virtual_Wallet_MERN/client
   ╰─± npm run dev
@@ -76,20 +87,23 @@
 
 ## 😘 Demo
  <!--aca coloca el deploy  -->
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3dd62868-fa71-49f6-84b8-c4bd430ddcf2/deploy-status)](https://app.netlify.com/sites/dainty-baklava-6120c7/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/95813aee-90c1-4f5f-8806-b7b9f5a1c848/deploy-status)](https://app.netlify.com/sites/pinguishop/deploys)
 
 </br>
 
 ## 📷 Capturas de Pantalla
+
 ### 🥰 Vistaso al Home
+
 ![🛸 Vistazo Detalles](https://res.cloudinary.com/dpiwmbsog/image/upload/v1686188304/wallet/pwcap1_vcrrot.png "home")
 
 ### 🥰 Responsive Home & Presupuesto
+
 ![🛸 Vistazo Detalles](https://res.cloudinary.com/dpiwmbsog/image/upload/v1686210075/wallet/cap2_xjncd2.png "home responsive")
 
 ### 🥰 Responsive Perfil & Transaccion
-![🛸 Vistazo Detalles](https://res.cloudinary.com/dpiwmbsog/image/upload/v1686210075/wallet/Captur1_l9kkfs.png "home")
 
+![🛸 Vistazo Detalles](https://res.cloudinary.com/dpiwmbsog/image/upload/v1686210075/wallet/Captur1_l9kkfs.png "home")
 
 </br>
 
@@ -100,23 +114,24 @@
 | **Guillermo Neculqueo**| **Fabian Torres**|
 | <a href="https://github.com/guillenec"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/in/guillermo-agust%C3%ADn-neculqueo-57932b196/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> | <a href="tu guthub"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="Tu linkedin"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
 
-
 </br>
 
 ## 🛠️💾 Integrante del Backend
+
 | <img src="https://res.cloudinary.com/dpiwmbsog/image/upload/v1686264426/PERFIL_GENERAL_hbngdm.jpg" width=60>|
 |:-:|
 | **Cristian** |
 | <a href="tu guthub"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="Tu linkedin"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
 
-
 ## 🎨🌈 Integrante de UX/UI
+
 | <img src="https://res.cloudinary.com/dpiwmbsog/image/upload/v1686264426/PERFIL_GENERAL_hbngdm.jpg" width=60>|
 |:-:|
 | **Jerson** |
 | <a href="tu guthub"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="Tu linkedin"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
 
 ## 🧪🔎, Integrante Tester
+
 | <img src="https://www.dropbox.com/scl/fi/ve3z80p0ma7700045e2vt/Yesid_Linares.png?dl=0&rlkey=5kjngb2kjbsgu5sd5u4jdwil0" width=60>|
 |:-:|
 | **Yesid** |
@@ -132,59 +147,64 @@
 
 </br>
 
-<a href="https://www.figma.com/file/yXl6Fu70MWBRlmsc6LskMU/PROYECTO-BILLETERA-VIRTUAL?type=design&node-id=85-161&t=y50DCyrvWMXy5fV2-0"><img src="https://img.shields.io/badge/Figma-%23F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white"/></a> <a href="LINK A TU CLOUDINARY"><img src="https://img.shields.io/badge/Cloudinary-%231563FF.svg?&style=for-the-badge&logo=google-cloud&logoColor=white"/></a> 
+<a href="https://www.figma.com/file/yXl6Fu70MWBRlmsc6LskMU/PROYECTO-BILLETERA-VIRTUAL?type=design&node-id=85-161&t=y50DCyrvWMXy5fV2-0"><img src="https://img.shields.io/badge/Figma-%23F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white"/></a> <a href="LINK A TU CLOUDINARY"><img src="https://img.shields.io/badge/Cloudinary-%231563FF.svg?&style=for-the-badge&logo=google-cloud&logoColor=white"/></a>
 
 ### 🎨 Arquitectura
+
 ![🛸 Vistazo Detalles](https://res.cloudinary.com/dpiwmbsog/image/upload/v1686285587/wallet/PROYECTO_BILLETERA_VIRTUAL_1_wfyrk5.svg "dieño arquitectura")
 
 ### 🎨 User Story
+
 ![🛸 Vistazo Detalles](https://res.cloudinary.com/dpiwmbsog/image/upload/v1686285587/wallet/PROYECTO_BILLETERA_VIRTUAL_sz5yo9.svg "user story")
 
 ### <a href="https://www.figma.com/file/4b5wGH4naRF0EoVPpavEt5/Encontrar-pets?node-id=342%3A8385"><img height="18px" src="https://img.icons8.com/color/344/figma--v1.png"/> Mockup</a>
-
 
 </br>
 
 ***
 
 ## PINGUI WALLET -BACKEND REST API-
+
 ![ScreenShot](https://i.ibb.co/crXKm66/Screenshot-from-2023-06-07-08-41-56.png)
 
 ## Servidor
 
-Esta REST API consta de varios modelos y sus controladores para llevar a cabo la funcionalidad de 
+Esta REST API consta de varios modelos y sus controladores para llevar a cabo la funcionalidad de
 la Wallet abasteciendo en el servicio al Frontend, persistiendo los datos en un cluster de MongoDB.
 Manteniendo la seguridad mediante JWT para los accesos de usuarios a sus operaciones.
 
 ## NOTA
 
-- Importante: Esta REST API es soporte al Frontend del siguiente repositorio: 
-  https://github.com/No-Country/Virtual_Wallet_MERN/tree/develop/client
+* Importante: Esta REST API es soporte al Frontend del siguiente repositorio:
+  <https://github.com/No-Country/Virtual_Wallet_MERN/tree/develop/client>
 
 ## Tecnologias
 
 Para desarrollar el Backend se utilizo lo siguiente con conceptos de DevOps:
-- NodeJS
-- Express
-- MongoDB
-- Mongoose
-- JWT
-- Docker
-- Ansible
-- K8S
-- Prometheus
-- Grafana
-- Github Actions
-- Railway.app
+
+* NodeJS
+* Express
+* MongoDB
+* Mongoose
+* JWT
+* Docker
+* Ansible
+* K8S
+* Prometheus
+* Grafana
+* Github Actions
+* Railway.app
 
 ## Testing
-Se realizaron un conjunto de pruebas manuales funcionales a la plataforma de PinguiWallet. Entre las herramientas usadas están:
-  - API Postman.
-  - Jira.
-  - Selenium IDE.
-  - Browser Stack (Mobile testing).
 
-Link de cargas de pruebas: https://drive.google.com/drive/folders/1suF_9jD0geLas8YVIVp9dOUOGKRueBUw?usp=sharing
+Se realizaron un conjunto de pruebas manuales funcionales a la plataforma de PinguiWallet. Entre las herramientas usadas están:
+
+* API Postman.
+* Jira.
+* Selenium IDE.
+* Browser Stack (Mobile testing).
+
+Link de cargas de pruebas: <https://drive.google.com/drive/folders/1suF_9jD0geLas8YVIVp9dOUOGKRueBUw?usp=sharing>
 
 ## Installation
 
@@ -198,8 +218,8 @@ npm i
 npm run dev
 ```
 
-
 ## Contenedores
+
 El Backend esta apto para correr en un entorno de produccion o desarrollo.
 En caso de ultiza entorno de produccion puede correr el Deploy con docker compose.
 
@@ -208,6 +228,7 @@ cd server
 generar la imagen Docker: docker build...
 generar el contenedor Docker: docker run...
 ```
+
 ![ScreenShot](https://i.ibb.co/gVh0Qvp/Screenshot-from-2023-06-07-08-39-38.png)
 
 ## Monitorizacion
@@ -231,13 +252,14 @@ Para el manejo de K8S lo puede realizar con KUBECTL
 
 ## AUTOMATIZACION CI/CD
 
-El CD esta basado en Github Actions y el CI esta anexado a Docker Hub para que Kubernetes 
+El CD esta basado en Github Actions y el CI esta anexado a Docker Hub para que Kubernetes
 obtenga la imagen actualizada de Deploy. Para esto puede utilizar ANSIBLE.
 
 ![ScreenShot](https://i.ibb.co/c18cdr0/Screenshot-from-2023-06-06-10-04-19.png)
 
-
 ## DEPLOY URL
-https://rest-api-wallet-no-country-production.up.railway.app/
-- Importante: agregar " /api " ademas de los declarados en " /routes " para acceder a los datos de la base de datos.
-  Ejemplo: https://rest-api-wallet-no-country-production.up.railway.app/api/user/get-all
+
+<https://rest-api-wallet-no-country-production.up.railway.app/>
+
+* Importante: agregar " /api " ademas de los declarados en " /routes " para acceder a los datos de la base de datos.
+  Ejemplo: <https://rest-api-wallet-no-country-production.up.railway.app/api/user/get-all>
